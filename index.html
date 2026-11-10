@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sibusiso Nzimande | AI Website Builder</title>
+<meta name="description" content="I build dope websites with AI. Fast. Clean. Made for phones.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { display: ['Sora','sans-serif'], body: ['Space Grotesk','sans-serif'] },
+    colors: { lime: { neon: '#b6ff00' } }
+  } }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:#000; font-family:'Space Grotesk',sans-serif; -webkit-tap-highlight-color: transparent; }
+  .bg-fallback {
+    background:
+      radial-gradient(60% 50% at 20% 20%, rgba(182,255,0,.12), transparent 70%),
+      radial-gradient(50% 50% at 80% 70%, rgba(80,80,255,.10), transparent 70%),
+      #000;
+    animation: drift 14s ease-in-out infinite alternate;
+  }
+  @keyframes drift { to { background-position: 40px 30px, -40px -30px, 0 0; filter: hue-rotate(25deg); } }
+  .glass {
+    background: rgba(255,255,255,.05);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,.14);
+  }
+  .btn-lime {
+    background:#b6ff00; color:#000; font-weight:700;
+    box-shadow: 0 0 18px rgba(182,255,0,.55), 0 0 40px rgba(182,255,0,.25);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-lime:hover { transform: translateY(-2px); box-shadow: 0 0 26px rgba(182,255,0,.8), 0 0 60px rgba(182,255,0,.4); }
+  .btn-lime:active { transform: scale(.97); }
+  .btn-ghost { transition: transform .2s, border-color .2s, box-shadow .2s; }
+  .btn-ghost:hover { border-color:#b6ff00; box-shadow:0 0 18px rgba(182,255,0,.35); transform: translateY(-2px); }
+  .avatar-glow { box-shadow: 0 0 0 4px #b6ff00, 0 0 30px 6px rgba(182,255,0,.6), 0 0 70px 14px rgba(182,255,0,.25); }
+  :focus-visible { outline: 2px solid #b6ff00; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .bg-fallback { animation:none; } html { scroll-behavior:auto; } }
+</style>
+</head>
+<body class="text-white antialiased overflow-x-hidden">
+
+<!-- BACKGROUND VIDEO -->
+<div class="fixed inset-0 -z-10 bg-fallback">
+  <video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover" aria-hidden="true">
+    <source src="https://assets.mixkit.co/videos/4883/4883-720.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-black/75"></div>
+</div>
+
+<main class="max-w-5xl mx-auto px-5">
+
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center py-16">
+    <img src="https://i.postimg.cc/zygVMmrD/WA-1794318342785.png" alt="Sibusiso Nzimande"
+         width="160" height="160" class="w-40 h-40 rounded-full object-cover avatar-glow">
+    <p class="mt-8 text-sm text-gray-400">Hello, I'm</p>
+    <h1 class="mt-2 font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-tight tracking-tight">SIBUSISO NZIMANDE</h1>
+    <p class="mt-5 max-w-md sm:max-w-xl text-base sm:text-lg text-gray-300">
+      I Build Dope Websites With AI. Fast. Clean. <span class="text-lime-neon font-semibold">Made For Phones.</span>
+    </p>
+    <div class="mt-9 flex flex-col sm:flex-row gap-4 w-full sm:w-auto max-w-xs sm:max-w-none">
+      <a href="#projects" class="btn-lime rounded-full px-8 py-3.5 text-base">View My Work</a>
+      <a href="https://wa.me/27843964505" target="_blank" rel="noopener"
+         class="btn-lime rounded-full px-8 py-3.5 text-base">WhatsApp Me</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="py-14 text-center" id="skills">
+    <h2 class="font-display font-bold text-2xl sm:text-3xl">What I Do</h2>
+    <div class="mt-7 flex flex-wrap justify-center gap-3">
+      <span class="glass rounded-full px-5 py-2 text-sm text-gray-200"><span class="text-lime-neon">●</span> Vibe Coder</span>
+      <span class="glass rounded-full px-5 py-2 text-sm text-gray-200"><span class="text-lime-neon">●</span> AI Website Builder</span>
+      <span class="glass rounded-full px-5 py-2 text-sm text-gray-200"><span class="text-lime-neon">●</span> Website Designer</span>
+      <span class="glass rounded-full px-5 py-2 text-sm text-gray-200"><span class="text-lime-neon">●</span> Mobile-First Builder</span>
+      <span class="glass rounded-full px-5 py-2 text-sm text-gray-200"><span class="text-lime-neon">●</span> Prompt Engineer</span>
+      <span class="glass rounded-full px-5 py-2 text-sm text-gray-200"><span class="text-lime-neon">●</span> Website Deployer</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="py-14" id="projects">
+    <h2 class="font-display font-bold text-2xl sm:text-3xl text-center">My Projects</h2>
+    <div class="mt-9 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Card 1 -->
+      <article class="glass rounded-3xl overflow-hidden flex flex-col">
+        <img src="https://i.postimg.cc/XXJt44Df/Neon-Freenet-Hub-Interface-(1).png" alt="RST FreeNet Hub preview"
+             loading="lazy" class="w-full h-48 object-cover rounded-t-3xl">
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl">RST FreeNet Hub</h3>
+          <a href="https://rst-freenet-hub.base44.app" target="_blank" rel="noopener"
+             class="mt-1 text-sm text-lime-neon break-all hover:underline">rst-freenet-hub.base44.app</a>
+          <p class="mt-3 text-sm text-gray-400 leading-relaxed flex-1">
+            A simple hub where people can find free net tools, updates and resources — built to work fast on phone.
+          </p>
+          <div class="mt-6 flex flex-col gap-3">
+            <a href="https://rst-freenet-hub.base44.app" target="_blank" rel="noopener" class="btn-lime rounded-full px-6 py-3 text-center text-sm">Live Demo</a>
+            <a href="https://wa.me/27843964505" target="_blank" rel="noopener" class="btn-ghost glass rounded-full px-6 py-3 text-center text-sm font-semibold">Get One Like This</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="glass rounded-3xl overflow-hidden flex flex-col">
+        <div class="h-48 bg-white/10 rounded-t-3xl flex items-center justify-center">
+          <span class="font-display font-extrabold text-7xl text-gray-500">?</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl">Your Project Could Be Next</h3>
+          <p class="mt-3 text-sm text-gray-400 leading-relaxed flex-1">Your business, your idea, your website — right here.</p>
+          <a href="https://wa.me/27843964505" target="_blank" rel="noopener" class="btn-lime mt-6 rounded-full px-6 py-3 text-center text-sm">WhatsApp Me To Start</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="glass rounded-3xl overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+        <div class="h-48 bg-white/10 rounded-t-3xl flex items-center justify-center">
+          <span class="font-display font-extrabold text-7xl text-gray-500">?</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl">Your Project Could Be Next</h3>
+          <p class="mt-3 text-sm text-gray-400 leading-relaxed flex-1">I only take 3 projects per month. Book your spot.</p>
+          <a href="https://wa.me/27843964505" target="_blank" rel="noopener" class="btn-lime mt-6 rounded-full px-6 py-3 text-center text-sm">WhatsApp Me To Start</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-14 text-center" style="padding-bottom: max(3.5rem, env(safe-area-inset-bottom))">
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#" aria-label="Email" class="btn-ghost glass w-12 h-12 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-lime-neon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      <a href="https://wa.me/27843964505" target="_blank" rel="noopener" aria-label="WhatsApp" class="btn-ghost glass w-12 h-12 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-lime-neon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      </a>
+      <a href="#" aria-label="Facebook" class="btn-ghost glass w-12 h-12 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-lime-neon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.6V13h2.8v8h3.1z"/></svg>
+      </a>
+      <a href="#" aria-label="TikTok" class="btn-ghost glass w-12 h-12 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-lime-neon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3h-3.2v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.6a5.8 5.8 0 1 0 5 5.8V9a7 7 0 0 0 4 1.3V7.1a4.1 4.1 0 0 1-4-4.1z"/></svg>
+      </a>
+      <a href="#" aria-label="YouTube" class="btn-ghost glass w-12 h-12 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-lime-neon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg>
+      </a>
+      <a href="#" aria-label="GitHub" class="btn-ghost glass w-12 h-12 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-lime-neon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.300.1-2.700 0 0 .8-.3 2.800 1a9.600 9.600 0 0 1 5 0c1.900-1.300 2.800-1 2.800-1 .5 1.400.2 2.400.1 2.700.6.7 1 1.600 1 2.700 0 3.900-2.400 4.700-4.600 5 .4.3.7.9.7 1.900v2.800c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+      </a>
+    </div>
+    <p class="mt-8 text-xs text-gray-500">© 2026 Sibusiso Nzimande. All Rights Reserved.</p>
+  </footer>
+
+</main>
+</body>
+</html>
